@@ -19,10 +19,27 @@ static void Division(int firstN, int secondN)
 
 while (@try)
 {
+    int firstN = 0;
+    int secondN = 0;
     Console.WriteLine("Enter first number: ");
-    int firstN = Convert.ToInt32(Console.ReadLine());
+    try
+    {
+         firstN = Convert.ToInt32(Console.ReadLine());
+    }
+    catch {
+        Console.WriteLine("Enter only numbers!");
+        break;
+    }
     Console.WriteLine("Enter second number: ");
-    int secondN = Convert.ToInt32(Console.ReadLine());
+    try
+    {
+        secondN = Convert.ToInt32(Console.ReadLine());
+    }
+    catch
+    {
+        Console.WriteLine("Enter only numbers!");
+        break;
+    }
     Console.WriteLine("Make a choice: \n" + "1. Addition\n" + "2. Subtraction\n" + "3. Multiplication\n" + "4. Division\n" + "5. Programm exit.\n");
     int menu = Convert.ToInt32(Console.ReadLine()); 
     switch (menu)
